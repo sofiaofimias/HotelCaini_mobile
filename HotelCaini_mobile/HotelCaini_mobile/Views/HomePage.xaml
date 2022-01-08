@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelCaini_mobile.Views.HomePage"
+             Background="white">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Review" Clicked="OnReviewAddedClicked" />
+        <ToolbarItem Text="Logout"  Clicked="Button_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listView" Margin="20" ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Description}"  Detail="{Binding Date}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
